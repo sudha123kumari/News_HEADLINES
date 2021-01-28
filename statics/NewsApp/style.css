@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+     max-width: 1440px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+ .navbar{
+
+    width: 100%;
+    position: fixed;
+    font-family: 'ubuntu' , sans-serif;
+    padding:15px 0;
+    transition: all .3s ease;
+    z-index: 999;
+    background-color: white;
+     border-bottom-style: solid;
+    border-bottom-width: 1px;
+     border-bottom-color: #8c8c8c;
+
+
+
+}
+
+.navbar.sticky{
+    background-color:white;
+    padding: 15px 0px;
+
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0px 80px;
+    border-bottom: #8c8c8c;
+
+
+}
+ .navbar .logo a{
+    color: #000;
+    font-size: 35px;
+    font-weight: 600;
+
+}
+
+
+.navbar.sticky .logo a span{
+    color:#8c8c8c;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    align-items: center;
+
+}
+
+.navbar .menu li a{
+    color: #000000;
+    font-size: 18px;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+}
+
+.navbar .menu li a:hover{
+    color: #8c8c8c;
+
+}
+.navbar.sticky .menu li a{
+    color: black;
+
+}
+.navbar.sticky .menu li a:hover{
+    color: #8c8c8c;
+
+}
+/*___________________________________Menu-btn-style_________________________________________________*/
+ .menu-btn{
+    color: black;
+    font-size: 23px;
+    cursor: pointer ;
+    display: none;
+}
+/*_______________________________________Media query___________________________________________________________*/
+ @media (max-width:1000px){
+
+         .navbar .logo a{
+                           font-size: 28px;
+                        }
+
+        .navbar .menu li a{
+
+                            font-size: 16px;
+                        }
+
+
+
+}
+
+@media (max-width:900px){
+
+    .navbar .logo a{
+                      font-size: 25px;
+                   }
+
+   .navbar .menu li a{
+
+                       font-size: 12px;
+                   }
+
+
+
+}
+
+
+
+
+
+ @media(max-width: 775px)
+ {
+
+
+    .navbar .max-width{
+
+        padding: 0px 20px 0px 60px;
+     }
+
+     .navbar .max-width .logo a{
+         font-size: 30px;
+     }
+    .max-width{
+          padding:  10px;
+      }
+    .navbar .menu-btn
+    {
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu {
+        position: fixed;
+        background: white;
+        height: 100vh;
+        width: 100%;
+        left:-100%;
+        top:0;
+        text-align: center;
+        padding-top:40px ;
+      }
+      .navbar .menu.active{
+          left:0%;
+
+      }
+      .menu-btn i.active:before{
+          content: "\f00d";
+      }
+
+      .navbar .menu li {
+          display: block;
+           padding-top: 50px;}
+          .navbar .menu li a{
+          display: inline-block;
+          font-size: 20px;
+
+      }
+
+
+
+ }
+
+
+
+
+
+/* ____________________________________about section ______________________________________________________________________ */
+
+ .about {
+     padding: 100px 0;
+     font-family: 'Poppins', sans-serif;
+
+
+ }
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.about .about-content .column{
+    width: 100%;
+}
+
+.about .about-content .column .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+.about .about-content .column .ntitle{
+    color: rgb(107, 111, 115);
+    size: 25px;
+}
+.about .about-content .column .text span{
+    color: #8c8c8c;
+}
+.about .about-content .column  p{
+  text-align: justify;
+}
+
+.about .newsbox{
+    border-bottom-style: solid  ;
+    border-bottom-width: 1px;
+    border-bottom-color: #8c8c8c;
+    width:100%;
+    object-fit: contain;
+     }
+.about .newsbox img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/*_______________________Scroll bar_____________________________*/
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    opacity: 10%;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(107, 111, 115);
+  }
+
+
+

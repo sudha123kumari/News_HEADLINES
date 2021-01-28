@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width-device-width , initial-scale=1.0">
+   <title>News Headlines</title>
+   <link rel="stylesheet" href="{% static 'NewsApp/style.css' %}">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+   <body>
+         <header class="header1">
+           <nav class="navbar" id="inavbar">
+             <div class="max-width">
+                <div class="logo"><a href="#">NEWS</a></div>
+                    <ul class="menu">
+                         <li><a href="{% url 'index' %}">Home</a></li>
+                         <li><a href="{% url 'science' %}">Science</a></li>
+                         <li><a href="{% url 'tech' %}">Technology</a></li>
+                         <li><a href="{% url 'business' %}">Business</a></li>
+                         <li><a href="{% url 'health' %}">Health</a></li>
+                         <li><a href="{% url 'sports' %}">Sports</a></li>
+                        <li><a href="{% url 'entertainment' %}">Entertainment</a></li>
+                   </ul>
+                   <div class="menu-btn">
+                        <i class="fa fa-bars"></i>
+                   </div>
+                 </div>
+              </nav>
+         </header>
+      <!-- __________ABOUT SECTION___________ -->
+      <section class="about" id="about">
+          <div class="max-width">
+              <div class="about-content">
+                  <div class="column">
+                         <div class="text">Latest News , <span>INDIA</span></div>
+                         {% for new, des, i in mylist %}
+                             <br>
+                               <div class="newsbox">
+                                     <img class = "img" src="{{ i }}" alt="Oops!!Picture not found" style="color: crimson">
+                                     <p class="ntitle"> {{ new }}
+                                      {{ value|linebreaks }}
+                                     </p>
+                                      {{ des }}
+                                      {{ value|linebreaks }}
+                                      <br>
+                               </div>
+                         {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+
+
+
+    <script src="{% static 'NewsApp/script.js' %}"></script>
+
+
+
+   </body>
+
+</html>
+{% block content %}
+{% endblock %}
